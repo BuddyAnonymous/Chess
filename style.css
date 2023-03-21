@@ -1,24 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Rubik+Iso&family=Rubik:ital,wght@1,900&display=swap');
+
 *{
     margin: 0;
     box-sizing: border-box;
     user-select: none;
+
 }
 body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(32,32,66,1) 30%, rgba(32,32,66,1) 70%, rgba(2,0,36,1) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.grid-container {
+#container {
     display: grid;
     grid-template-columns: repeat(8, 12.5%);
     grid-template-rows: repeat(8, 12.5%);
     width: 640px;
     height: 640px;
     margin-left: 360px;
+    align-items: center;
+    justify-items: center;
+    border: 5px solid;
+    border-image: linear-gradient(45deg, rgba(82,74,21,1), rgba(78,50,31,1)) 1;
   }
   .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
     font-size: 30px;
     text-align: center;
     width: 80px;
@@ -28,23 +35,50 @@ body{
     align-items: center;
   }
   .white{
-    background-color: burlywood;
+    background-color: rgb(238,238,210)  ;
   }
   .black{
-    background-color: green;
+    background-color: rgb(118,150,86);
   }
   .meni{
     height: 600px;
-    width: 400px;
-    background-color: green;
+    width: 300px;
+    background: rgb(82,74,21);
+    background: linear-gradient(90deg, rgba(82,74,21,1) 0%, rgba(78,61,31,1) 100%);
     border: 3px solid rgb(49, 30, 30);
     border-radius: 40px;
     margin-top: 20px;
     margin-left: 50px;
   }
-  .mid{
+  #mid{
     display: flex;
     flex-direction: row;
-    margin-top: 200px;
+    margin-top: 70px;
   }
-  
+  .pieces{
+    position: relative;
+    -webkit-user-drag: none;
+    user-select: none;
+  }
+  .hint-black{
+    background: radial-gradient(circle at center, rgb(106,135,77) 30%, rgb(118,150,86) 30%);
+  }
+  .hint-white{
+    background: radial-gradient(circle at center, rgb(214,214,189) 30%, rgb(238,238,210) 30%);
+  }
+  .upgrade-pawn{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: black;
+    height: 360px;
+    width: 80px;
+  }
+  .hint-eat{
+    border: 4px rgb(98, 94, 94) solid;
+  }
+  .googleFont{
+    font-family: 'Rubik', sans-serif;
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.8), 
+    0px -4px 10px rgba(255, 255, 255, 0);
+  }
